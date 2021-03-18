@@ -37,17 +37,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void insertCustomer(){
-
-    }
-
-    private void findCustomer(){
-
-    }
-
-    private void getAllCustomer(){
-
-    }
+//    private void insertCustomer(){
+//
+//    }
+//
+//    private void findCustomer(){
+//
+//    }
+//
+//    private void getAllCustomer(){
+//
+//    }
 
     private void onAdd(){
         if (!validate()) {
