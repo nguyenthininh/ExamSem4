@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,10 +50,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void onAdd(){
+        if (!validate()) {
+            return;
+        }
+        RadioButton bt = (RadioButton) findViewById(rgGender.getCheckedRadioButtonId());
+
+        CustomerEntity customerEntity = new CustomerEntity();
+        customerEntity.username = etName.getText().toString();
+        customerEntity.email = etMail.getText().toString();
+        customerEntity.phone = etPhone.getText().toString();
+        customerEntity.gender = bt.getText().toString();
+//        long id = db.customerDao().insertCustomer(customerEntity);
+//        if (id > 0) {
+//            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+//        }
+        goToListUser();
 
     }
     private void onSearch(){
 
+    }
+    private void goToListUser() {
+        Intent intent = new Intent(this, ListCustomerActivity.class);
+        startActivity(intent);
     }
 
 

@@ -16,7 +16,7 @@ public class CustomerEntity {
     public String email;
 
     @ColumnInfo(name = "phone")
-    public int phone;
+    public String phone;
 
     @ColumnInfo(name = "gender")
     public String gender;

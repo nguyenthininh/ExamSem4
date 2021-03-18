@@ -12,7 +12,7 @@ import static androidx.room.OnConflictStrategy.REPLACE;
 @Dao
 public interface CustomerDao {
     @Insert(onConflict = REPLACE)   //khi điền chữ REPLACE vào sẽ báo đỏ, để hết báo đỏ thì chuôt trỏ chuột vào chọn More Action và chọn Import
-    void insertUser(CustomerEntity customer);
+    void insertCustomer(CustomerEntity customer);
 
     @Update
     void updateUser(CustomerEntity customer);
